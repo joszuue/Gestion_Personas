@@ -15,7 +15,12 @@
             $this->view->Valimensaje= false;
             $this->view->mensaje = "";
             $this->view->renderView('main/main.php');//llamando al metodo renderView para pintar la vista
+        }
 
+        function excelPersona(){
+            parent::__construct();
+            $this->view->listaPersonas= $this->model->listaPersonas();//enviamos arreglos de objetos a las vistas
+            $this->view->renderView('excel/excelPersona.php');//llamando al metodo renderView para pintar la vista
         }
 
         function agregarPersona(){
