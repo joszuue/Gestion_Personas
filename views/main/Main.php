@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<?php require "views/templates/header.php"; ?>
-<?php require "views/templates/nav.php";
-?>
-
+<?php require "views/templates/header.php";?>
+<?php require "views/templates/nav.php";?>
 <body>
     <br>
     <br>
@@ -124,15 +122,15 @@
                         ?>
                     </tbody>
                 </table>
-                <a href="<?php echo constant("URL") ?>Main/excelPersona" class="btn btn-success">Descargar Excel</a>
+                <a href="<?php echo constant("URL")?>Main/excelPersona" class="btn btn-success">Descargar Excel</a>
                 <br><br>
             </div>
         </div>
     </div>
 
 </body>
-<?php require "views/templates/modal.php"; ?>
-<?php require "views/templates/footer.php"; ?>
+<?php require "views/templates/modal.php";?>
+<?php require "views/templates/footer.php";?>
 
 </html>
 

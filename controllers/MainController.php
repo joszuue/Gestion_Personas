@@ -1,9 +1,6 @@
 <?php
     class MainController extends Controller{//extenderemos de controller para poder acceder a sus funciones
         function __construct(){
-            //parent::__construct(); codigo de la primera parte de la guia
-            //$this->view->mensaje1= "Parametro enviado a la vista";
-            //$this->view->renderView('main/main.php');
         }
  
         function principal(){
@@ -17,10 +14,15 @@
             $this->view->renderView('main/main.php');//llamando al metodo renderView para pintar la vista
         }
 
+        function vista(){
+            parent::__construct();
+            $this->view->renderView('main/vista.php');//llamando al metodo renderView para pintar la vista
+        }
+
         function excelPersona(){
             parent::__construct();
             $this->view->listaPersonas= $this->model->listaPersonas();//enviamos arreglos de objetos a las vistas
-            $this->view->renderView('excel/excelPersona.php');//llamando al metodo renderView para pintar la vista
+            $this->view->renderView('excel/excel.php');//llamando al metodo renderView para pintar la vista
         }
 
         function agregarPersona(){

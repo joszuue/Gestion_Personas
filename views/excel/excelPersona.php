@@ -2,6 +2,8 @@
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
+require_once '../../libs/vendor/autoload.php';
+
 // Crear una nueva hoja de cálculo
 $spreadsheet = new Spreadsheet();
 
@@ -32,7 +34,7 @@ $hojaActiva->setCellValue('G1', 'Fecha de nacimiento');
 
 // Rellenar los datos
 $row = 2; // Comenzar en la segunda fila
-foreach ($this->listaPersonas as $lista) {
+foreach ($listaPersonas as $lista) {
     $hojaActiva->setCellValue("A{$row}", $lista->getIdPersona());
     $hojaActiva->setCellValue("B{$row}", $lista->getNombre());
     $hojaActiva->setCellValue("C{$row}", $lista->getEdad());
@@ -45,10 +47,12 @@ foreach ($this->listaPersonas as $lista) {
 
 // Configurar encabezados para la descarga
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="mi_excel.xlsx"');
+header('Content-Disposition: attachment;filename="excelPersona.xlsx"');
 header('Cache-Control: max-age=0');
 
 $writer = new Xlsx($spreadsheet);
 $writer->save('php://output');
+/*$writer = new Xlsx($spreadsheet);
+$writer->save('Excel.xlsx');*/
 exit;
 ?>

@@ -2,7 +2,7 @@
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-require 'vendor/autoload.php';
+require 'libs/vendor/autoload.php';
 
 // Crear una nueva hoja de cálculo
 $spreadsheet = new Spreadsheet();
