@@ -22,7 +22,8 @@
         function excelPersona(){
             parent::__construct();
             $this->view->listaPersonas= $this->model->listaPersonas();//enviamos arreglos de objetos a las vistas
-            $this->view->renderView('excel/excel.php');//llamando al metodo renderView para pintar la vista
+            $this->view->renderView('excel/excelPersona.php');//llamando al metodo renderView para pintar la vista
+            exit();
         }
 
         function agregarPersona(){

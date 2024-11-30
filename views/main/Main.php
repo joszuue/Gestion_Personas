@@ -122,7 +122,7 @@
                         ?>
                     </tbody>
                 </table>
-                <a href="<?php echo constant("URL")?>Main/excelPersona" class="btn btn-success">Descargar Excel</a>
+                <a href="<?php echo constant("URL")?>Spreadsheet/excelPersona" class="btn btn-success">Descargar Excel</a>
                 <br><br>
             </div>
         </div>
